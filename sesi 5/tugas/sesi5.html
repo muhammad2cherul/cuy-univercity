@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuy Univercity Tugas Sesi 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ini nav-bar -->
+    <div class="navbar">
+        <img id="img-nav" src="../../../../laman tautan pribadi/gambar/images/github.png" alt="logo">
+        <div id="root">
+            <input type='text' placeholder='username' id="usernameInput" />
+            <input type='password' placeholder='password' id="passwordInput" />
+            <button onclick="onLogin()" id="loginButton">LOGIN</button>
+            <button onclick="onLogout()" id="logoutButton">LOGOUT</button>
+        </div>
+    </div>
+
+    <!-- register -->
+    <div class="content">
+
+        <div class="register">
+
+            <div class="cuy">
+                <h1>Selamat Datang Di Cuy Univercity</h1>
+                <p id="aaa">Silahkan registrasi diri anda terlebih dahulu</p>
+            </div>
+
+            <div class="kotakReg">
+                <div class="nama">
+                    <h6>Nama</h6>
+                    <input type='text' placeholder='Name' id="nameInput" />
+                </div>
+                <div class="phone">
+                    <h6>Nomor Telepon</h6>
+                    <input type='text' placeholder='Phonenumber' id="phoneInput" />
+                </div>
+                <div class="email">
+                    <h6>Email</h6>
+                    <input type='text' placeholder='Email' id="emailInput" />
+                </div>
+                <div class="jurusan">
+                    <h6>Jurusan</h6>
+                    <input type='text' placeholder='Jurusan' id="jurusanInput" />
+                </div>
+            </div>
+            <div class="submit">
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+            </div>
+        </div>
+
+        <!-- ini content -->
+        <div class="container">
+            <h1 id="admin">Login Sebagai Admin</h1>
+            <h1 id="basic">Login Sebagai User Biasa</h1>
+        </div>
+    </div>
+
+
+    <!-- ini footer -->
+    <footer> copyright Cuy Univercity Purbalingga</footer>
+    <script type="application/javascript">
+
+        let usernameInput = document.getElementById('usernameInput');
+        let passwordInput = document.getElementById('passwordInput');
+        let loginButton = document.getElementById('loginButton');
+        let logoutButton = document.getElementById('logoutButton');
+        let admin = document.getElementById('admin');
+        let basic = document.getElementById('basic');
+
+
+        admin.style.display = 'none';
+        basic.style.display = 'none';
+        logoutButton.style.display = 'none';
+
+
+        function onLogin() {
+            localStorage.setItem('username', usernameInput.value);
+            logoutButton.style.display = 'block';
+            if (usernameInput.value == 'admin' && passwordInput.value == 'admin') {
+                localStorage.setItem('role', 'admin');
+                usernameInput.style.display = "none";
+                passwordInput.style.display = "none";
+                loginButton.style.display = "none";
+                basic.style.display = 'none';
+                admin.style.display = 'block';
+            } else {
+                usernameInput.style.display = "none"
+                passwordInput.style.display = "none"
+                loginButton.style.display = "none"
+                localStorage.setItem('role', 'basic');
+                admin.style.display = 'none';
+                basic.style.display = 'block';
+            }
+        }
+
+        if (localStorage.getItem('username')) {
+            usernameInput.style.display = 'none';
+            passwordInput.style.display = 'none';
+            loginButton.style.display = 'none';
+            logoutButton.style.display = 'block';
+            if (localStorage.getItem('role') == 'admin') {
+                basic.style.display = 'none';
+                admin.style.display = 'block';
+            } else {
+                admin.style.display = 'none';
+                basic.style.display = 'block';
+            }
+
+        }
+
+        function onLogout() {
+            localStorage.clear();
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
+
+<!--
+    1. Tambahkan role baru sebanyak yang kalian mau
+    2. Tampilkan sesuatu yang berbeda di setiap dashboard  rolenya
+    3. Bikin register / menu pendaftaran. 
+    4. user terdaftar yang ada di storage yang bisa login
+ -->
+
+<!-- --cblue: rgb(74, 58, 255);
+--clightgray: #EFF0F7;
+--cdarkgray: #6F6C90;
+--cdarkblue: #170F49;
+--cradiogray: #D9DBE9;
+--cpurple: #962DFF;
+} -->

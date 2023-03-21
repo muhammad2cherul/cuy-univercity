@@ -1,0 +1,252 @@
+ 
+ 
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     margin: auto;
+     padding: 1.5vh;
+     align-items: center;
+     background-color:#d7dcff;
+ }
+ 
+ #img-nav {
+    height: 7vh;
+    width: 9vh;
+ }
+
+ #root {
+    display: flex;
+    gap: 2vh;
+       
+ }
+
+ #usernameInput {
+     padding-left: 10px;
+     height: 25px;
+     border: 1px solid #EFF0F7;
+     border-radius: 15px;
+     box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);
+ }
+
+ #passwordInput {
+     padding-left: 10px;
+     height: 25px;
+     border: 1px solid #EFF0F7;
+     border-radius: 15px;
+     box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);
+ }
+
+ #loginButton {
+    background-color: #EFF0F7;
+    height: 25px;
+    border: 1px solid #962DFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);
+ }
+ #logoutButton {
+    
+    background-color: #EFF0F7;
+    height: 25px;
+    border: 1px solid #962DFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);
+ }
+
+ .content {
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+ }
+ /* ini register */
+ .register {
+    border: 1px solid blanchedalmond;
+    background-color: #EFF0F7;
+    width: 70vh;
+    height: 70vh;
+    display: grid;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 7vh;
+    height: 80vh;
+    border-radius: 1vh;
+            
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #EFF0F7;
+    box-shadow: 0px 5px 16px rgba(8, 15, 52, 0.06);
+    border-radius: 34px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    
+ }
+ #aaa {
+    display: inline;
+ }
+  .cuy {
+    grid-column: 1;
+    grid-row: 1 ;
+    border-radius: 1rem;
+    text-align: center;
+
+    font-size: 25px;
+
+}
+
+.kotakReg {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 1rem;
+
+    display: grid;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+
+    font-size: 24px;
+}
+
+.kotakReg h6 {
+    margin-bottom: -.1rem;
+}
+
+.nama {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 1rem;
+}
+
+#nameInput {
+    font-weight: 400;
+    padding-left: 1vh;
+    height: 35px;
+    border: 1px solid #EFF0F7;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);
+    
+}
+.phone {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 1rem;
+}
+
+#phoneInput {
+    font-weight: 400;
+    padding-left: 1vh;
+    height: 35px;
+    border: 1px solid #EFF0F7;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);
+}
+.email {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 1rem;
+
+}
+#emailInput {
+    font-weight: 400;
+    padding-left: 1vh;
+    height: 35px;
+    border: 1px solid #EFF0F7;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);    
+}
+.jurusan {
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 1rem;
+}
+
+#jurusanInput {
+    font-weight: 400;
+    padding-left: 1vh;
+    height: 35px;
+    border: 1px solid #EFF0F7;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);    
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;padding: 2vh;
+}
+
+/* .btn-primary {
+    padding-bottom: 1vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.1);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer { 
+    background-color: #d7dcff;
+    text-align: center;
+    padding: 2vh;
+}

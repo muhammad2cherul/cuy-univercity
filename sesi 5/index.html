@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 5 cuy univercity</title>
+</head>
+<style>
+    #root {
+        background-color: tomato;
+        height: 100vh;
+        color: wheat;
+        font-size: 2em;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- INI KONTEN KITA -->
+    <div id="root">
+        <input type='text' placeholder='username' id="usernameInput" />
+        <input type='password' placeholder='password' id="passwordInput" />
+        <button onclick="onLogin()" id="loginButton">LOGIN</button>
+        <button onclick="onLogout()" id="logoutButton">LOGOUT</button>
+        <br />
+        <h1 id="admin">Login Sebagai Admin</h1>
+        <h1 id="basic">Login Sebagai User Biasa</h1>
+    </div>
+
+    <script type="application/javascript">
+
+        let usernameInput = document.getElementById('usernameInput');
+        let passwordInput = document.getElementById('passwordInput');
+        let loginButton = document.getElementById('loginButton');
+        let logoutButton = document.getElementById('logoutButton');
+        let admin = document.getElementById('admin');
+        let basic = document.getElementById('basic');
+
+        admin.style.display = 'none';
+        basic.style.display = 'none';
+        logoutButton.style.display = 'none';
+
+
+        function onLogin() {
+            localStorage.setItem('username', usernameInput.value);
+            logoutButton.style.display = 'block';
+            if (usernameInput.value == 'admin' && passwordInput.value == 'admin') {
+                localStorage.setItem('role', 'admin');
+                usernameInput.style.display = "none";
+                passwordInput.style.display = "none";
+                loginButton.style.display = "none";
+                basic.style.display = 'none';
+                admin.style.display = 'block';
+            } else {
+                usernameInput.style.display = "none"
+                passwordInput.style.display = "none"
+                loginButton.style.display = "none"
+                localStorage.setItem('role', 'basic');
+                admin.style.display = 'none';
+                basic.style.display = 'block';
+            }
+        }
+
+        if (localStorage.getItem('username')) {
+            usernameInput.style.display = 'none';
+            passwordInput.style.display = 'none';
+            loginButton.style.display = 'none';
+            logoutButton.style.display = 'block';
+            if (localStorage.getItem('role') == 'admin') {
+                basic.style.display = 'none';
+                admin.style.display = 'block';
+            } else {
+                admin.style.display = 'none';
+                basic.style.display = 'block';
+            }
+
+        }
+
+        function onLogout() {
+            localStorage.clear();
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- contoh pengeditan hanya menggunakan js -->
+
+
+<!-- <script> -->
+<!-- // const myName = 'Muhammad Dwi';
+
+// const myHobi = 'Bersepeda';
+
+// let root = document.getElementById('root');
+// root.textContent = myName + ' ' + myHobi;
+// root.style.backgroundColor = 'tomato';
+// root.style.color = 'white';
+// root.style.height = '100vh';
+// root.style.fontSize = '2em';
+// root.style.textAlign = 'center'; -->
+
+<!-- </script> -->
