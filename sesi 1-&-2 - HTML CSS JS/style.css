@@ -1,0 +1,97 @@
+*, 
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container-navbar {
+    background-color: firebrick;
+    width: 100%;
+    height: 10vh;
+}
+
+.ul-navbar {
+    background-color: firebrick;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.li-navbar {
+    font-size: 30px;
+    list-style-type: none;
+    padding: 20px;
+    margin: 5px;
+    color: white;
+}
+
+.li-navbar:hover {
+    background-color: black;
+    text-decoration: none;
+    transition: .2s ease-in-out; 
+    transition-delay: .5s;
+    border-radius: 20px;
+}
+
+.a-navbar {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
+.container-content {
+    background-color: black;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-content {
+    width: 30%;
+    height: 30%;
+    display: inline-block
+    /* justify-content: center;
+    align-items: center; */
+    /* text-decoration: none; */
+
+    
+}
+
+
+.a-content:hover {
+
+    text-decoration: none;
+    transition: .2s ease-in-out; 
+    transition-delay: .5s;
+    border-radius: 20px;
+}
+
+.img-content {
+    width: 100%;
+    height: 100%;
+}
+
+#biodata {
+    background-color: white;
+    width: 100%;
+    height: 30%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 54px;
+    min-height: fit-content;
+}
+
+.container-footer {
+    background-color: crimson;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1-footer {
+    font-size: 40px;   
+}
